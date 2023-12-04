@@ -1,0 +1,412 @@
+* {
+	padding: 0;
+	margin: 0;
+
+}
+
+@font-face {
+	font-family: Cunia;
+	src: url("../../Font/Cunia.ttf");
+}
+
+
+#igra-podloga {
+	position: absolute;
+	bottom: 1px;
+	display: flex;
+	visibility: hidden;
+}
+
+#igra-podloga:fullscreen {
+	visibility: visible;
+}
+
+::backdrop {
+	background: white;
+}
+
+canvas {
+	background: black;
+	align-self: center; 
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gotova-igra{
+	position: absolute;
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	background: #EEE;
+}
+
+#natragGI {
+	width: 75px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 20px;
+    float: left;
+    z-index: 0;
+}
+
+.karticaGI{
+	flex: 1;
+	font-size: 25px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	text-align: center;
+	background: black;
+    color: green
+}
+
+
+#flex-spremnik2GI {
+	margin-bottom: 15px;
+	font-size: 20px;
+	display: flex;
+
+}
+
+#divNaslovGI {
+	position: absolute;
+	width: 100%;
+	
+}
+
+#naslovGI {
+	padding-top: 12px;
+	text-align: center;
+	padding-right: 100px;
+	z-index: 1;
+}
+
+#podaciGI {
+	position: absolute;
+	width: 100%;
+	top: 150px;
+	font-size: 25px;
+}
+
+.p {
+	position: absolute;
+	margin-top: 10px;
+	padding: 2px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#podaciGI > * {
+	text-align: center;
+	margin: 0 auto 15px;
+} 
+
+.centriraj {
+	position: relative;
+}
+
+#podaciGI > .centriraj label {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+#nad, #vr, #rez {
+	background: red;
+	display: block;
+}
+
+input {
+	padding: 5px 0;
+	font-size: 20px;
+	text-align: center;
+}
+
+input[type= "submit"] {
+	background: black;
+	color: green;
+	padding: 10px;
+	font-weight: 700;
+	margin-top: 20px;
+}
+
+.spremi-tipka {
+	
+}
+
+.naslov {
+	height: 33%;
+	display: flex;
+	justify-content: center;
+}
+
+.naslov h1 {
+	font-family: Cunia;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #757575, 0 0 40px #757575, 0 0 50px #757575, 0 0 60px #757575, 0 0 70px #757575;
+	letter-spacing: 0.03em;
+	margin-top: 30px;
+	width: 500px;
+	height: 135px;
+	font-size: 140px;
+	text-align: center;
+	color: red;
+	position: relative;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+
+.menu {
+	position: relative;
+	top: 50px;
+	width: 33%;
+}
+
+.menu, #tezina, #pozadina {
+	font-size: 50px;
+	color: green;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.menu > * .crta{
+	border-bottom: 3px solid rgb(10, 200, 75);
+	position: relative;
+	left: -10px;
+
+}
+
+.start, .opcije, .najRez, .trgovina {
+	margin-bottom: 10px;
+}
+
+.menu label:hover {
+	cursor: pointer;
+}
+
+.panel {
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-top: 8px;
+}
+
+.panel:hover {
+	color: red;
+	background: black;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+#opcije-izbornik, #najRez-izbornik {
+	position: absolute;
+	top: calc(33% + 4px);
+	background: white;
+	width: 100%;
+	height: 66%;
+	box-shadow: 0 0 20px 5px black;
+	display: none;
+}
+
+#opcije-izbornik h1 {
+	height: 50px;
+	font-size: 50px;
+	margin-top: 25px;
+	margin-left: 15%;
+	padding-bottom: 5px;
+	width: 250px;
+	position: relative;
+	top: -5px;
+	color:red;
+	border: 3px solid black;
+}
+
+#opcije-izbornik #OPCIJE{
+	padding-left: 15px;
+	width: 200px;
+}
+
+#OPCIJE, #NAJBOLJI {
+	padding-left: 15px;
+	width: 200px;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+#tezina label, #pozadina label {
+	font-size: 30px;
+}
+
+#flex-spremnik {
+	display: flex;
+	justify-content: space-between;
+}
+
+#pozadina {
+	flex: 1;
+}
+
+#tezina, #pozadina {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+#tezina h1 {
+	text-align: center;
+}
+
+#tezina #aktivan, #flex-spremnik2 #aktivan {
+	background: black;
+	color: green;
+}
+
+#tezina h1:hover, #flex-spremnik2 .kartica:hover {
+	color: rgba(10, 200, 30, 0.7);
+	background: rgba(10, 10, 30, 0.05);
+	transition: all 0.24s linear;
+	cursor: pointer;
+}
+
+#boja {
+	margin-top: 10px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: row;
+}
+
+.dim {
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	margin-right: 8px;
+}
+
+.rozaP {
+	background: rgba(255, 35, 0, 0.125);
+}
+
+.zutaP {
+	background: rgba(255, 140, 0, 0.15);
+}
+
+.plavaP {
+	background: rgba(20, 40, 235, 0.175);
+}
+
+.zelenaP {
+	background: rgba(0, 185, 35, 0.2);
+}
+
+#aktivnaB {
+	border: 1px solid black;
+}
+
+#zvuk {
+	margin-top: 30px;
+}
+
+#najRez-izbornik {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+#najRez-izbornik h1 {
+	text-align: center;
+	height: 50px;
+	padding-left: 0px;
+	font-size: 50px;
+	margin-top: 30px;
+	margin-left: 15%;
+	padding-bottom: 5px;
+	width: 600px;
+	position: relative;
+	top: -5px;
+	color:red;
+	border: 3px solid black;
+}
+
+
+#flex-spremnik2 {
+	width: 600px;
+	margin-top: 30px;
+	font-size: 20px;
+	margin-left: 15%;
+	display: flex;
+
+}
+
+.kartica {
+	flex: 1;
+	font-size: 25px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	text-align: center;
+	color: red;
+	border: 3px solid black;
+}
+
+.ploca {
+	padding-left: 15px;
+}
+
+table {
+	padding-top: 10px;
+	width: 600px;
+	margin-left: 15%;
+	font-size: 23px;
+	text-align: center;
+}
+
+tr {
+	padding-bottom: 5px;
+}
+
+td {
+	padding-top: 5px;
+ 	padding-bottom: 10px;
+}
+
+tr:nth-child(odd){
+	background: rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(2){
+	color: rgb(255, 0, 0);
+}
+
+#nL1 {
+	display: inline;
+}
+
+.poz {
+	width: 52px;
+}
+
+
+#tab-norm, #tab-tes, #tab-lud {
+	display: none;
+}
+
+.nad {
+	text-align: start;
+}
+
+img {
+	width: 75px;
+	height: 50px;
+	margin-top: 30px;
+	margin-left: 30px;
+	float: left;
+}
+
+img:hover {
+	cursor: pointer;
+}

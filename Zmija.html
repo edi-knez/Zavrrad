@@ -1,0 +1,479 @@
+<html>
+	<head>
+		<title>ZMIJA</title>
+		<link rel= "stylesheet" href= "Resursi/Jezgra/CSS/style.css" />
+		<link rel="stylesheet"  href= "Resursi/Jezgra/CSS/slider.css" />
+	</head>
+	<body>
+		<div class= "naslov">
+			<h1>ZMIJA</h1>
+		</div>
+		<div><hr></hr></div>
+		<div class= "menu">
+			<div class= "start panel">
+				<label>Započni</label>
+				<div class= "crta"></div>
+			</div>
+			<div class= "opcije panel">
+				<label>Opcije</label>
+				<div class= "crta"></div>
+			</div>
+			<div class= "najRez panel">
+				<label>Najviši rezultati</label>
+				<div class= "crta"></div>
+			</div>
+		</div>
+
+
+		<div id= "igra-podloga">
+			<canvas style= "width: 700px; height: 700px;"></canvas>
+			<div id= "gotova-igra" style= "display: none;">
+				<div id= "flex-spremnik2GI">
+					<div class= "karticaGI lag" id= "AKTIVAN"></div>
+				</div>
+				<img id= "natragGI" src= "Resursi/Slike/nazad gumb.jfif"></img>
+				<div class="divNaslovGi"><h1 id= "naslovGI">KRAJ IGRE</h1></div>
+				<form id= "podaciGI">
+					<div class= "centriraj" id= "v">
+						<label for= "vr" id= "vr">Vrijeme:</label>
+  						<label for= "vrijeme" id="vrijeme" class= "p"></label>
+					</div>
+					<div class= "centriraj">
+ 						<label for= "rez" id= "rez">Rezultat:</label>
+ 						<label for= "rezultat" id="rezultat" class= "p"></label>
+ 					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div id= "opcije-izbornik">
+			<img src= "Resursi/Slike/nazad gumb.jfif"></img>
+			<h1 id= "OPCIJE">OPCIJE</h1>
+			<div id= "flex-spremnik">
+				<div id= "pozadina">
+					<label>Pozadina</label>
+					<div id= "boja">
+						<div class= "dim rozaP"></div>
+						<div class= "dim zutaP"></div>
+						<div class= "dim plavaP"></div>
+						<div class= "dim zelenaP"></div>
+					</div>
+					<div id= "zvuk">
+						<label>Zvuk</label>
+						<div id= "spremnik">
+							
+							<div class="slideContainer">
+        						<input type="range" min= "0" max= "100" value= "30"   class="slider" id="myRange">
+       							<p>Jacina: <span id="value"></span></p>
+   							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id= "tezina">
+					<label>Tezina</label>
+					<h1 class="lagano">Lagano</h1>
+					<h1 class= "normalno">Normalno</h1>
+					<h1 class= "tesko">Tesko</h1>
+					<h1 class= "ludost">Ludost</h1>
+				</div>
+			</div>
+		</div>
+
+
+		<div id= "najRez-izbornik">
+			<img src= "Resursi/Slike/nazad gumb.jfif"></img>
+			<h1 id= "NAJBOLJI">NAJBOLJI REZULTATI</h1>
+			<div id= "flex-spremnik2">
+				<div class= "kartica lag poc" id= "aktivan">Lagano</div>
+				<div class= "kartica norm">Normalno</div>
+				<div class= "kartica tes">Tesko</div>
+				<div class=" kartica lud">Ludost</div>
+			</div>	
+			<table id= "tab-lag">
+				<tr>
+					<th class= "poz">Poz.</th>
+					<th>Nadimak</th>
+					<th>Potrebno vrijeme</th>
+					<th>Rezultat</th>
+				</tr>
+				<tr>
+					<td class= "poz">1</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">2</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">3</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">4</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">5</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<table id= "tab-norm">
+				<tr>
+					<th class= "poz">Poz.</th>
+					<th>Nadimak</th>
+					<th>Potrebno vrijeme</th>
+					<th>Rezultat</th>
+				</tr>
+				<tr>
+					<td class= "poz">1</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">2</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">3</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">4</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">5</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<table id= "tab-tes">
+				<tr>
+					<th class= "poz">Poz.</th>
+					<th>Nadimak</th>
+					<th>Potrebno vrijeme</th>
+					<th>Rezultat</th>
+				</tr>
+				<tr>
+					<td class= "poz">1</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">2</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">3</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">4</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">5</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<table id= "tab-lud">
+				<tr>
+					<th class= "poz">Poz.</th>
+					<th>Nadimak</th>
+					<th>Potrebno vrijeme</th>
+					<th>Rezultat</th>
+				</tr>
+				<tr>
+					<td class= "poz">1</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">2</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">3</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">4</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class= "poz">5</td>
+					<td class= "nad"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript" src= "Resursi/Jezgra/JS/podaci.js"></script>
+		<script type="text/javascript" src= "Resursi/Jezgra/JS/zvuk.js"></script>		
+		<script type="text/javascript">	 			////////////////// komentiraj kod
+			console.log(localStorage);
+/////////////////////////////////////////////////////////////////////////////////// GLOBALNE VARIJABLE	
+
+			var TEZINA = localStorage["tezina"];	// dohvati vrijednost "tezine" koja je spremljena u memoriji i dodijeli vrijednost varijabli "TEZINA" 												kojoj se može pristupit iz bilo kojeg dijela koda
+			var ZVUK = localStorage["zvuk"];
+			var POZADINA = localStorage["pozadina"];
+
+
+/////////////////////////////////////////////////////////////////////////////////// OZNACAVANJE ELEMENATA 
+
+			const body = document.querySelector("body");
+			const start = document.querySelector(".menu .start");
+			const opcije = document.querySelector(".menu .opcije");
+			const najRez = document.querySelector(".menu .najRez");
+			const igraPodloga = document.querySelector("#igra-podloga");
+			const pjesmaLagano = new Audio("Resursi/Zvuk/1.mp3");
+			const pjesmaNormalno = new Audio("Resursi/Zvuk/2.mp3");
+			const pjesmaTesko = new Audio("Resursi/Zvuk/3.mp3");
+			const pjesmaLudost = new Audio("Resursi/Zvuk/4.mp3");
+			const zvukJabuka = new Audio("Resursi/Zvuk/hrana1.mp3")
+			const gotova_igra = document.querySelector("#gotova-igra")
+			const potrebnoVrijeme = document.querySelector("#vrijeme");
+			const rez = document.querySelector("#rezultat");
+			const izadi_iz_igre = document.querySelector("#natragGI");
+			const unosNadimka = document.querySelector(".centriraj")
+			const memoriraj = document.querySelector(".centriraj#submit");
+			const gumb = document.querySelector("#opcije-izbornik img");
+			const gumb2 = document.querySelector("#najRez-izbornik img")
+			const Opcije = document.querySelector("#opcije-izbornik");
+			const NajRez = document.querySelector("#najRez-izbornik");
+			const laganoGumb = document.querySelector(".lagano");
+			const normalnoGumb = document.querySelector(".normalno");
+			const teskoGumb = document.querySelector(".tesko");
+			const ludostGumb = document.querySelector(".ludost");
+			const rozaP = document.querySelector(".dim.rozaP");
+			const zutaP = document.querySelector(".dim.zutaP");
+			const plavaP = document.querySelector(".dim.plavaP");
+			const zelenaP = document.querySelector(".dim.zelenaP");
+ 			const laganoTab = document.querySelector(".lag.poc");
+			const normalnoTab = document.querySelector(".norm");
+			const teskoTab = document.querySelector(".tes");
+			const ludostTab = document.querySelector(".lud");
+			const Tab1 = document.querySelector("#najRez-izbornik table#tab-lag");
+			const Tab2 = document.querySelector("#najRez-izbornik table#tab-norm");
+			const Tab3 = document.querySelector("#najRez-izbornik table#tab-tes");
+			const Tab4 = document.querySelector("#najRez-izbornik table#tab-lud");
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////// DODAVANJE SLUŠAČA
+			function dodajSlusaceGlavnogIzbornika(){
+				start.addEventListener("click", pokreniIgru);				// dodaj slušač "click" na element "start" koji će pokrenut funkciju "pokreniIgru"
+				opcije.addEventListener("click", otvoriOpcije);
+				najRez.addEventListener("click", otvoriNajRez);
+				rozaP.addEventListener("click", promjeniBoju);
+				zutaP.addEventListener("click", promjeniBoju);
+				plavaP.addEventListener("click", promjeniBoju);
+				zelenaP.addEventListener("click", promjeniBoju);
+				laganoGumb.addEventListener("click", promijeniRazinu);
+				normalnoGumb.addEventListener("click", promijeniRazinu);
+				teskoGumb.addEventListener("click", promijeniRazinu);
+				ludostGumb.addEventListener("click", promijeniRazinu);
+				gumb.addEventListener("click", vratiNaGlavniIzbornik);
+				gumb2.addEventListener("click", vratiNaGlavniIzbornik2);
+				laganoTab.addEventListener("click", promijeniTablicu);
+				normalnoTab.addEventListener("click", promijeniTablicu);
+				teskoTab.addEventListener("click", promijeniTablicu);
+				ludostTab.addEventListener("click", promijeniTablicu);
+			}
+
+			function ukloniSlusaceGlavnogIzbornika(){
+				start.removeEventListener("click", pokreniIgru);   // ukloni slušač "click" sa elementa "start" koji neće moći  																	pokrenut funkciju "pokreniIgru"
+				opcije.removeEventListener("click", otvoriOpcije);
+				najRez.removeEventListener("click", otvoriNajRez);
+				rozaP.removeEventListener("click", promjeniBoju);
+				zutaP.removeEventListener("click", promjeniBoju);
+				plavaP.removeEventListener("click", promjeniBoju);
+				zelenaP.removeEventListener("click", promjeniBoju);
+				laganoGumb.removeEventListener("click", promijeniRazinu);
+				normalnoGumb.removeEventListener("click", promijeniRazinu);
+				teskoGumb.removeEventListener("click", promijeniRazinu);
+				ludostGumb.removeEventListener("click", promijeniRazinu);
+				gumb.removeEventListener("click", vratiNaGlavniIzbornik);
+				gumb2.removeEventListener("click", vratiNaGlavniIzbornik2);
+				laganoTab.removeEventListener("click", promijeniTablicu);
+				normalnoTab.removeEventListener("click", promijeniTablicu);
+				teskoTab.removeEventListener("click", promijeniTablicu);
+				ludostTab.removeEventListener("click", promijeniTablicu);
+			}
+			dodajSlusaceGlavnogIzbornika();
+////////////////////////////////////////////////////////////////////////////////////////////////// GLAVNI IZBORNIK
+
+			function pokreniIgru(){
+			toggleFullscreen();
+			ukloniViseParametaraCLASS(igraPodloga, "rozaP", "zutaP", "plavaP", "zelenaP");
+			igraPodloga.setAttribute("class", body.classList.value);
+			ukloniSlusaceGlavnogIzbornika();
+			document.addEventListener("keydown", (e) => keyCode = e.keyCode);
+			window.setTimeout(petljaIgrice, 3500)
+			}
+
+			function otvoriOpcije(){ Opcije.style.display = "block"; }	// prikaži Opcije na ekranu
+			function otvoriNajRez(){ 
+				NajRez.style.display = "block";							// prikaži Najviše Rezultate
+				podaci.popuniRezultate(); 										// popuni sve tablice rezultatima iz memorije
+			}
+
+			function vratiNaGlavniIzbornik(){
+				Opcije.style.display = "none";							// izbriši Opcije sa ekrana
+			}
+
+			function vratiNaGlavniIzbornik2(){
+				NajRez.style.display = "none";							// izbriši Najviše rezultate sa ekrana
+			}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////// IGRA
+
+			function getFullScreenElement() {
+				return document.fullscreenElement
+					|| document.webkitFullscreenElement
+					|| document.mozFullscreenElement
+					|| document.msFullscreenElement;
+			}
+
+			function toggleFullscreen(){
+				if(getFullScreenElement()){
+					document.exitFullscreen();
+				}	else {
+					igraPodloga.requestFullscreen().catch(console.log);
+				}
+			}
+
+			function muzikaPocni(pjesma) {
+				pjesma.play();
+			}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////// OPCIJE
+
+			function promijeniRazinu(){
+				ukloniID(laganoGumb, normalnoGumb, teskoGumb, ludostGumb, "aktivan");
+				this.setAttribute("id", "aktivan");					// postavi elementu koji je pokreno funkciju id imena "aktivan"
+				TEZINA = this.innerText;							// spremi u globalnu varijablu vrijednost teksta koji se nalazi u elementu
+				localStorage.setItem("tezina", TEZINA);				// spremi vrijednost varijable "TEZINA" u varijablu "tezina" koja se nalazi u memoriju
+			}
+			(function promijeniRazinuUcitaj(){						// funkcija se poziva automatski čim se pokrene ova aplikacija
+				if(TEZINA == "Lagano")			laganoGumb.setAttribute("id", "aktivan");	 // ako je vrijednost varijable "TEZINA" jednaka "Lagano" onda 																					postavi atribut "id" imena "aktivan" na element "laganoGumb"
+				else if(TEZINA == "Normalno")	normalnoGumb.setAttribute("id", "aktivan");			
+				else if(TEZINA == "Tesko")		teskoGumb.setAttribute("id", "aktivan");
+				else if(TEZINA == "Ludost")		ludostGumb.setAttribute("id", "aktivan");
+			})();
+
+			function promjeniBoju(){
+				ukloniViseParametaraCLASS(body, "rozaP", "zutaP", "plavaP", "zelenaP");
+				body.setAttribute("class", this.classList[1]);
+				ukloniID(rozaP, zutaP, plavaP, zelenaP, "aktivnaB");
+				this.setAttribute("id", "aktivnaB");
+				if(this == rozaP)			localStorage.setItem("pozadina", "1");
+				else if(this == zutaP)		localStorage.setItem("pozadina", "2");
+				else if(this == plavaP)		localStorage.setItem("pozadina", "3");
+				else if(this == zelenaP)	localStorage.setItem("pozadina", "4");
+			}
+
+			(function promijeniBojuUcitaj(){
+				if(POZADINA == "1")	{
+					rozaP.setAttribute("id", "aktivnaB");
+					body.setAttribute("class", "rozaP");
+				}
+				else if(POZADINA == "2") {
+					zutaP.setAttribute("id", "aktivnaB");
+					body.setAttribute("class", "zutaP");
+				}
+				else if(POZADINA == "3") {
+					plavaP.setAttribute("id", "aktivnaB");
+					body.setAttribute("class", "plavaP");
+				}
+				else if(POZADINA == "4") {
+					zelenaP.setAttribute("id", "aktivnaB");
+					body.setAttribute("class", "zelenaP");
+				}
+			})();
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////// NAJVIŠI REZULTATI
+
+			function promijeniTablicu(){
+				ukloniID(laganoTab, normalnoTab, teskoTab, ludostTab, "aktivan");
+				this.setAttribute("id", "aktivan");								// postavi atribut id imena "aktivan" na element koji je pokrenu ovu funkciju
+				prikaz(Tab1, Tab2, Tab3, Tab4, "none");
+				if(this == laganoTab)			Tab1.style.display = "table";	// ukoliko je pritisnut element "laganoTab", prikaži tablicu razine "lagano"
+				else if(this == normalnoTab)	Tab2.style.display = "table";
+				else if(this == teskoTab)		Tab3.style.display = "table";
+				else if(this == ludostTab)		Tab4.style.display = "table";
+			}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////// SKRATI MI MUKE
+
+		function ukloniID(a, b, c, d, _id){			// ukloni atribut "id" imena "(koji zadamo parametrom _id)" ukoliko on postoji na elementu ili ne
+			a.removeAttribute("id", _id);
+			b.removeAttribute("id", _id);
+			c.removeAttribute("id", _id);
+			d.removeAttribute("id", _id);
+		}
+		function ukloniCLASS(a, b, c, d, _class){ 	// ukloni atribut "class" imena (koji zadamo parametrom '_class') ukoliko on postoji na elementu ili ne 												prilikom zvanja funkcije
+			a.removeAttribute("class", _class);
+			b.removeAttribute("class", _class);
+			c.removeAttribute("class", _class);
+			d.removeAttribute("class", _class);
+		}
+		function prikaz(a, b, c, d, par){			// ukloni ili prikazi element (ovisno o parametru 'par' koji zadamo prilikom zvanja funkcije)
+			a.style.display = par;
+			b.style.display = par;
+			c.style.display = par;
+			d.style.display = par;
+		}
+		function ukloniViseParametaraCLASS(a, par1, par2, par3, par4){	// ukloni atribut "class" sa više različitih imena (ovisno o zadanom parametru 																			'par1', 'par2', 'par3' i 'par4' pri zvanju funkcije)
+			a.removeAttribute("class", par1);
+			a.removeAttribute("class", par2);
+			a.removeAttribute("class", par3);
+			a.removeAttribute("class", par4);
+		}
+		</script>
+		<script type="text/javascript" src= "Resursi/Jezgra/JS/script.js"></script>
+		<script type="text/javascript" src= "Resursi/Jezgra/JS/zmija.js"></script>
+		<script type="text/javascript" src= "Resursi/Jezgra/JS/hrana.js"></script>
+	</body>
+</html>
