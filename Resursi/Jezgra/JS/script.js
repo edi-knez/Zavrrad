@@ -10,15 +10,17 @@ function petljaIgrice(){
 	if(document.fullscreen) {
 //		console.log("PETLJA IGRICE");
 		const frame = (10000 / 60) / 10;
-		let vrijeme = TEZINA == "Lagano" ? 575 : TEZINA == "Normalno" ? 500 : TEZINA == "Tesko" ? 470 : 420;
+		let vrijeme = TEZINA == "Lagano" ? 300 : TEZINA == "Normalno" ? 250 : TEZINA == "Tesko" ? 200 : 175;
 		let oduzmiVrijeme = TEZINA == "Lagano" ? 37.5 : TEZINA == "Normalno" ? 37.5 : 45;
-		trenutacnaPjesma = TEZINA == "Lagano" ? pjesmaLagano :                                                        						        TEZINA == "Normalno" ? pjesmaNormalno :                                                           						TEZINA == "Tesko" ? pjesmaTesko : pjesmaLudost;
+		trenutacnaPjesma = TEZINA == "Lagano" ? pjesmaLagano :
+							TEZINA == "Normalno" ? pjesmaNormalno : 
+							TEZINA == "Tesko" ? pjesmaTesko : pjesmaLudost;
 		Zmija.nacrtajPocetnuPoziciju();
 		setTimeout(() => {
 			trenutacnaPjesma.volume = parseInt(localStorage["jacinaZvuka"]) / 100;
 			zvukJabuka.volume = parseInt(localStorage["jacinaZvuka"]) / 100;
 			Hrana.stvoriHranu();
-			trenutacnaPjesma.play();
+		//	trenutacnaPjesma.play();
 
 		refreshRate = setInterval(() => {
 				upravljanje();
